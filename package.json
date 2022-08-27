@@ -1,4 +1,12 @@
 {
+  "name": "11ty-no-style-please",
+  "description": "A template for a minimalistic blog",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve",
+    "start": "npx @11ty/eleventy --serve"
+  },
+  "license": "MIT",
   "dependencies": {
     "@11ty/eleventy": "^1.0.2",
     "luxon": "^3.0.1"
