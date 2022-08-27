@@ -1,0 +1,25 @@
+{
+    "title": "11ty-no-style-please",
+    "subtitle": "demo of a page made with 11ty-no-style-please",
+    "menu": [
+        {
+            "title": "read more here",
+            "entries": [
+                {
+                    "title": "github",
+                    "url": "http://github.com/stopnoanime/11ty-no-style-please"
+                }
+            ]
+        },
+        {
+            "title": "all posts with the 'post' tag",
+            "post_list": true
+        },
+        {
+            "title": "all posts with the 'test' tag",
+            "post_list": {
+                "tag": "test"
+            }
+        }
+    ]
+}

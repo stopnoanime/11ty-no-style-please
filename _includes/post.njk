@@ -1,0 +1,14 @@
+---
+layout: base.njk
+---
+<a href="/">{{ site.back_home_text }}</a>
+
+<article>
+  <p class="post-meta">
+    <time datetime="{{ page.date }}">{{ page.date | toYear }}</time>
+  </p>
+  
+  <h1>{{ title }}</h1>
+  
+  {{ content | safe  }}
+</article>

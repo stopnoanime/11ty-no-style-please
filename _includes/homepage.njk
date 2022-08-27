@@ -1,0 +1,12 @@
+---
+layout: base.njk
+---
+<header>
+    <h1>{{ mainpage.title or site.title }}</h1>
+    <p>{{ mainpage.subtitle or site.description }}</p>
+</header>
+<main>
+    <hr>
+    {% set entries = mainpage.menu %}
+    {% include "menu.njk" %}
+</main>

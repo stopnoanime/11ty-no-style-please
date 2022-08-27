@@ -1,0 +1,54 @@
+html {
+    max-width: 80ch;
+    padding: 3em 1em;
+    margin: auto;
+    line-height: 1.75;
+    font-size: 1.4em;
+    font-family: monospace;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 2em 0 1em;
+}
+  
+p,ul,ol {
+    margin-bottom: 1em;
+    color: #1d1d1d;
+}
+
+.post-meta {
+    text-align: right;
+}
+
+img {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+blockquote {
+    font-style: italic;
+    border: thin solid black;
+    padding: 1rem;
+}
+
+blockquote p {
+    margin: 0;
+}
+
+pre {
+    overflow-x: auto;
+    padding: 1rem;
+}
+
+pre, code {
+    background: #e0e0e0;
+}
+
+table { width: 100%; }
+
+table, th, td {
+  border: thin solid black;
+  border-collapse: collapse;
+  padding: 0.4rem;
+}
