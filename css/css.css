@@ -52,3 +52,7 @@ table, th, td {
   border-collapse: collapse;
   padding: 0.4rem;
 }
+
+.table-wrapper {
+    overflow-x: auto;
+}
