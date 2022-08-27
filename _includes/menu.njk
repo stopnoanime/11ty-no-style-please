@@ -8,7 +8,7 @@
             {% endif %}
 
             {% if entry.post_list %}
-                {% set posts = collections[ entry.post_list.tag or 'post'] %}
+                {% set posts = collections[entry.post_list] %}
                 {% if posts %}
                     <ul>
                         {% for post in posts | reverse %}

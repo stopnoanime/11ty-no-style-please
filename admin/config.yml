@@ -1,0 +1,44 @@
+backend:
+  name: git-gateway
+  branch: master 
+
+media_folder: media
+public_folder: /media
+
+collections:
+  - label: Posts
+    name: posts
+    folder: posts
+    create: true
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: date, widget: date }
+      - { label: Tags, name: tags, widget: list, field: { label: Tag, name: tag, widget: string}}
+      - { label: Content, name: body, widget: markdown }
+  - label: Settings
+    name: settings
+    files:
+      - label: Mainpage
+        name: mainpage
+        file: _data/mainpage.json
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Sub Title, name: subtitle, widget: string }
+          - { label: Menu, name: menu, widget: list, fields: [
+              { label: Title, name: title, widget: string },
+              { label: Url, name: url, widget: string, required: false },
+              { label: Post list, name: post_list, widget: string, required: false },
+              { label: Entries, name: entries, widget: list, fields: [
+                { label: Title, name: title, widget: string },
+                { label: Url, name: url, widget: string, required: false },
+                { label: Post list, name: post_list, widget: string, required: false },
+            ]}
+          ]}
+      - label: Site
+        name: site
+        file: _data/site.json
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Description, name: description, widget: string }
+          - { label: Language, name: language, widget: string }
+          - { label: Post back home text, name: back_home_text, widget: string }

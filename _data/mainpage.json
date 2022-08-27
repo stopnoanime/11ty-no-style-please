@@ -13,13 +13,11 @@
         },
         {
             "title": "all posts with the 'post' tag",
-            "post_list": true
+            "post_list": "post"
         },
         {
             "title": "all posts with the 'test' tag",
-            "post_list": {
-                "tag": "test"
-            }
+            "post_list": "test"
         }
     ]
 }
