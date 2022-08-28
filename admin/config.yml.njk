@@ -21,7 +21,7 @@ collections:
     create: true
     fields:
       - { label: Title, name: title, widget: string }
-      - { label: Date, name: date, widget: date, required: false }
+      - { label: Date, name: date, widget: datetime, required: false }
       - { label: Tags, name: tags, widget: list, default: ["post"]}
       - { label: Content, name: body, widget: markdown }
   - label: Settings
