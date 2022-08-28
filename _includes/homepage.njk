@@ -2,15 +2,15 @@
 layout: base.njk
 ---
 <header>
-    <h1>{{ mainpage.title or site.title }}</h1>
+    <h1>{{ homepage.title or site.title }}</h1>
 
-    {% set subtitle = mainpage.subtitle or site.description%}
+    {% set subtitle = homepage.subtitle or site.description%}
     {% if subtitle %}
         <p>{{ subtitle }}</p>
     {% endif %}
 </header>
 <main>
     <hr>
-    {% set entries = mainpage.menu %}
+    {% set entries = homepage.menu %}
     {% include "menu.njk" %}
 </main>

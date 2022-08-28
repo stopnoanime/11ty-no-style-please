@@ -2,5 +2,6 @@
     "title": "11ty no style please",
     "description": "demo of a page made with 11ty-no-style-please",
     "language": "en",
-    "back_home_text": ".."
+    "back_home_text": "..",
+    "url": "https://11ty-no-style-please.netlify.com"
 }

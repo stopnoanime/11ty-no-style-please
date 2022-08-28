@@ -21,8 +21,7 @@ The simplest way to use this template is to deploy it on Netlify using this butt
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/stopnoanime/11ty-no-style-please&stack=cms)
 
 After deploying it to Netlify, you will be invited to join the CMS by email. 
-After accepting the invite and setting a password, you will have a fully configured and working blog site.
-If you want you can set the `site_url` in `admin/config.yml` to the correct URL for your site, this will show up in your CMS.
+After accepting the invite and setting a password you can start change the site's settings, and creating posts from within the CMS.
 
 ---
 You can also run eleventy locally and then deploy it manually:
@@ -46,3 +45,54 @@ You can also run eleventy locally and then deploy it manually:
 ### 5. Deploy the site
 
 You can either connect your repository to Netlify to enable automatic deploy (recommended), or manually copy the site files from `_site` to them.
+
+# Configuration
+All configuration can be easily changed from within the Netlify CMS.
+If you prefer to do so, you can also manually edit the configuration files with a text editor.
+
+All configuration files are located in the `_data` folder and are in `json` format.
+Here I describe what each field means:
+
+### - site.json
+```
+title: default page title
+description: global page description
+language: HTML language value
+back_home_text: text to show on "back home" button on every post
+url: site url, used in Netlify CMS
+```
+
+### - homepage.json
+```
+title: homepage title
+subtitle: text to show under homepage title
+menu: The menu object, configures how the menu looks
+```
+
+### - The menu object
+It should be an array of entires, each entry has the following parameters:
+```
+title: entry title
+url: if set, the entry is a link pointing to this url
+post_list: accepts a string, if set, the entry will show a nested list of all posts with the tag that post_list is set to
+entries: an nested array of entries with the same available parameters
+```
+
+For example use, look at the default menu object
+```
+"menu": [
+    {
+        "title": "read more here",
+        "entries": [
+            {
+                "title": "github",
+                "url": "http://github.com/stopnoanime/11ty-no-style-please"
+            }
+        ]
+    },
+    {
+        "title": "all posts with the 'post' tag",
+        "post_list": "post"
+    }
+]
+```

@@ -1,3 +1,8 @@
+---
+# generate the yml using 11ty, so we can configure the CMS, from the CMS! idk if it is a good idea...
+permalink: admin/config.yml
+---
+
 backend:
   name: git-gateway
   branch: master 
@@ -5,7 +10,9 @@ backend:
 media_folder: media
 public_folder: /media
 
-# site_url: https://11ty-no-style-please.netlify.app/
+{% if site.url %}
+site_url: {{ site.url }}
+{% endif %}
 
 collections:
   - label: Posts
@@ -20,9 +27,9 @@ collections:
   - label: Settings
     name: settings
     files:
-      - label: Mainpage
-        name: mainpage
-        file: _data/mainpage.json
+      - label: Homepage
+        name: homepage
+        file: _data/homepage.json
         fields:
           - { label: Title, name: title, widget: string, required: false }
           - { label: Sub Title, name: subtitle, widget: string, required: false }
@@ -44,3 +51,4 @@ collections:
           - { label: Description, name: description, widget: string, required: false }
           - { label: Language, name: language, widget: string }
           - { label: Post back home text, name: back_home_text, widget: string }
+          - { label: URL, name: url, widget: string, required: false }
