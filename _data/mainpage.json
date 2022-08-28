@@ -14,10 +14,6 @@
         {
             "title": "all posts with the 'post' tag",
             "post_list": "post"
-        },
-        {
-            "title": "all posts with the 'test' tag",
-            "post_list": "test"
         }
     ]
 }
