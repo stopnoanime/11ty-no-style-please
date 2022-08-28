@@ -47,7 +47,7 @@ You can also run eleventy locally and then deploy it manually:
 You can either connect your repository to Netlify to enable automatic deploy (recommended), or manually copy the site files from `_site` to them.
 
 # Configuration
-All configuration can be easily changed from within the Netlify CMS.
+All configuration can be easily changed from within the Netlify CMS at `SITE_URL/admin`.
 If you prefer to do so, you can also manually edit the configuration files with a text editor.
 
 All configuration files are located in the `_data` folder and are in `json` format.
