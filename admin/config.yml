@@ -13,7 +13,7 @@ collections:
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Date, name: date, widget: date, required: false }
-      - { label: Tags, name: tags, widget: list, field: { label: Tag, name: tag, widget: string}, required: false}
+      - { label: Tags, name: tags, widget: list, field: { label: Tag, name: tag, widget: string, default: post}}
       - { label: Content, name: body, widget: markdown }
   - label: Settings
     name: settings
