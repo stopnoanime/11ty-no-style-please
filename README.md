@@ -26,7 +26,7 @@ After accepting the invite and setting a password you can start change the site'
 ---
 You can also run eleventy locally and then deploy it manually:
 
-### 1. Clone the repository ( or fork it and then clone )
+### 1. Clone the repository ( or use it as a template then clone )
 
 `git clone https://github.com/stopnoanime/11ty-no-style-please`
 
