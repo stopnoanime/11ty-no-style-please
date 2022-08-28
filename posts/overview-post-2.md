@@ -1,7 +1,9 @@
 ---
 title: Overview post 2
 date: 2022-08-28T10:41:51.195Z
-tags: ['post']
+tags:
+  - post
+  - test
 ---
 
 Pariatur excepteur aliquip proident aute. Cillum Lorem esse voluptate aliquip ad pariatur ullamco non dolore sint exercitation eu et. Ullamco et aliqua ea ut mollit nulla in nostrud.
