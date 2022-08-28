@@ -7,6 +7,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("admin");
     eleventyConfig.addPassthroughCopy("email");
 
+    eleventyConfig.ignores.add("email/");
+
     eleventyConfig.addFilter("toYear", (dateObj) => {
         return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
     });     
