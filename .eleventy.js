@@ -6,8 +6,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("media");
     eleventyConfig.addPassthroughCopy("admin");
 
-    eleventyConfig.addFilter("toYear", (dateObj) => {
-        return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+    eleventyConfig.addFilter("formatDate", (dateObj) => {
+        return DateTime.fromJSDate(dateObj).toISODate();
     });     
 
     let markdownOptions = {
