@@ -1,0 +1,10 @@
+[build]
+  publish = "_site"
+  command = "npm run build"
+
+# Simple redirects rule to redirect all unknown links to home page
+
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 301
