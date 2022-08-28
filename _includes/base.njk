@@ -6,7 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>{{ title or site.title }}</title>
-    <link rel="stylesheet" href="/css/css.css">
+    <link rel="stylesheet" href="/css/css.css"> 
+    {% if page.url == '/' %}
+        <script>
+            if(location.hash) window.location = `/admin/#${location.href.split("#").pop()}`
+        </script>
+    {% endif %}
 </head>
 <body>
     {{ content | safe }}
