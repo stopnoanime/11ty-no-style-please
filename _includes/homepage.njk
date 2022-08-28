@@ -3,7 +3,11 @@ layout: base.njk
 ---
 <header>
     <h1>{{ mainpage.title or site.title }}</h1>
-    <p>{{ mainpage.subtitle or site.description }}</p>
+
+    {% set subtitle = mainpage.subtitle or site.description%}
+    {% if subtitle %}
+        <p>{{ subtitle }}</p>
+    {% endif %}
 </header>
 <main>
     <hr>

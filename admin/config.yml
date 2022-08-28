@@ -12,8 +12,8 @@ collections:
     create: true
     fields:
       - { label: Title, name: title, widget: string }
-      - { label: Date, name: date, widget: date }
-      - { label: Tags, name: tags, widget: list, field: { label: Tag, name: tag, widget: string}}
+      - { label: Date, name: date, widget: date, required: false }
+      - { label: Tags, name: tags, widget: list, field: { label: Tag, name: tag, widget: string}, required: false}
       - { label: Content, name: body, widget: markdown }
   - label: Settings
     name: settings
@@ -22,8 +22,8 @@ collections:
         name: mainpage
         file: _data/mainpage.json
         fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Sub Title, name: subtitle, widget: string }
+          - { label: Title, name: title, widget: string, required: false }
+          - { label: Sub Title, name: subtitle, widget: string, required: false }
           - { label: Menu, name: menu, widget: list, fields: [
               { label: Title, name: title, widget: string },
               { label: Url, name: url, widget: string, required: false },
@@ -39,6 +39,6 @@ collections:
         file: _data/site.json
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Description, name: description, widget: string }
+          - { label: Description, name: description, widget: string, required: false }
           - { label: Language, name: language, widget: string }
           - { label: Post back home text, name: back_home_text, widget: string }
